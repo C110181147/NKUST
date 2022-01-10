@@ -11,6 +11,7 @@ public class youtubeAPI {
         try {
             String youtubeSearch = "阿神";
             String json = Jsoup.connect("https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + youtubeSearch + "&key=AIzaSyDUKYPZIaz4O3t5dyqClNuppGp3V9m-fPI&type=video&maxResults=3").ignoreContentType(true).execute().body();
+            //format json by https://jsoneditoronline.org/
 //            System.out.println(json);
 
             JSONObject resObject = new JSONObject(json);
