@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="big-box">
+            <img src="./bootstrap-logo.svg" width="75" heigh="75" alt="一張圖片">
+            <div class="sign-text">
+                <h1>Please sign in</h1>
+            </div>
+            <input type="email"  style="width: 300;height: 50;padding: 2ex" placeholder="email">
+            <input type="password" style="width: 300;height: 50;padding: 2ex" placeholder="password">
+            <div class="checkbox">
+            <input type="checkbox" style="width: 15px;height: 15px">Remenber Me
+            </div>
+            <input  class="button" type="button" style="width: 300;height: 50;font-size: 20px" value="sign up">
+            <p class="year">© 2017–2021</p>
+        </div>
+    </body>
+</html>
+<style>
+    .big-box{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    .checkbox{
+        display: inline;
+        margin-top:12PX;
+        margin-bottom: 12px;
+        font-size:18px;
+    }
+    .button{
+        background-color:#0d6efd;
+        color: white;
+    }
+    .sign-text{
+        display:inline;
+    }
+    .year{
+        margin-top: 60PX;
+        margin-bottom: 10px;
+    }
+
+
+</style>
