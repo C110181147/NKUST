@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="simple.css">
 </head>
 <body>
-    <div class="page-title">
-        <p class="title-font">Color Flipper</p>
-        <nav class="page-link">
-            <li class="link-font"><a href="simple.html">Simple</a></li>
-            <li class="link-font"><a href="hex.html">Hex</a></li>
-        </nav>
-    </div>
-    <div class="container" id="container">
-        <p class="text">Background Color: <span class="color" id="color"></span></p>
-        <button class="button"  id="button" onclick="changeColor()">CLICK ME</button>
-    </div>
+    <nav>
+        <div class="nav-center">
+            <h4>color flipper</h4>
+            <ul class="nav-links">
+                <li><a href="simple.html">simple</a></li>
+                <li><a href="hex.html">hex</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" id="container">
+            <h2>background color : <span class="color" id="color">#f1f5f8</span></h2>
+            <button class="btn btn-hero" id="btn" onclick="changeColor()">click me</button>
+        </div>
+    </main>
     <script src="simple.js"></script>
 </body>
 </html>

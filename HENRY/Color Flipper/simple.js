@@ -5,10 +5,8 @@ document.getElementById("color").innerHTML="#f1f5f8"
 function changeColor(){
 const colorNumber= colors[Math.floor(Math.random()*4)]
 document.getElementById("container").style.backgroundColor=colorNumber
-document.getElementById("button").style.backgroundColor=colorNumber
+document.getElementById("btn").style.backgroundColor=colorNumber
 document.getElementById("color").innerHTML=colorNumber
 }
-function buttonColor(){
-    document.getElementById("button").style.backgroundColor=black
-}
-// document.getElementById("button").addEventListener(,buttonColor(0))
+
+// document.getElementById("btn").addEventListener("click",changeColor())
