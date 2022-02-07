@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dice</title>
+    <link rel="stylesheet" href="dice.css">
 </head>
 
 <body>
@@ -14,7 +15,8 @@
             <input type="number" id=dices style="width: 60PX;" min="0" max="100">
         </div>
         <div> <span>請選擇面數</span>
-            <select class="form-select" id="noodle" style="width: 60PX;height:25px;" aria-label="Default select example">
+            <select class="form-select" id="noodle" style="width: 60PX;height:25px;"
+                aria-label="Default select example">
                 <option value="1">1面</option>
                 <option value="2">2面</option>
                 <option value="3">3面</option>
@@ -24,22 +26,33 @@
             </select>
         </div>
         <div> <span>請輸入要丟擲幾次</span>
-            <input type="number"  id=drops style="width: 60PX;" min="0" max="100">
+            <input type="number" id=drops style="width: 60PX;" min="0" max="100">
         </div>
         <div>
             <input type="button" id="button" value="骰出" style="width: 50PX;height: 30px;">
         </div>
-        <div id="result">
+        <DIV class="container">
+            <div>
+                <p class="p">Total</p>
+                <div class="total" id="total">
+                    
+                </div>
+            </div>
+            <div>
+                <p class="p">Time</p>
+                <div class="time" id="time">
 
-        </div>
+                </div>
+            </div>
+            <div>
+                <p class="p">Point</p>
+                <div class="result" id="result">
+
+                </div>
+           </div>
+         </DIV>
     </div>
 </body>
 <script src="dice.js"></script>
-<script src="dice.css"></script>
 
 </html>
-<style>
-    .font-body{
-        font-size:20px;
-    }
-</style>

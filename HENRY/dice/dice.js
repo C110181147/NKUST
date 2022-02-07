@@ -1,28 +1,48 @@
-function result(value) {
-    const dices = document.getElementById("dices")
-    const noodle = document.getElementById("noodle")
-    const drops = document.getElementById("drops")
+function result() {
+    const dices = document.getElementById("dices").value
+    const noodle = document.getElementById("noodle").value
+    const drops = document.getElementById("drops").value
     const result = document.getElementById("result")
+    const idTotal = document.getElementById("total")
+    const idTime = document.getElementById("time")
+    result.innerHTML = ""
+    idTotal.innerHTML=""
+    idTime.innerHTML=""
+    const diceObject = {};
 
-    
 
-    for (let i = 0; i < drops.value; i++) {
+    for (let i = 0; i < drops; i++) {
         let Total = 0
-        for (let j = 0; j < dices.value; j++) {
-            let p = document.createElement("p")
-            Total += (Math.floor(Math.random() * noodle.value) + 1)
-            p.innerHTML=Total
-            result.appendChild(p)
+        for (let j = 0; j < dices; j++) {
+            Total += (Math.floor(Math.random() * noodle) + 1)
+        }
+        if (diceObject[Total]) {
+            diceObject[Total] += 1
+        } else {
+            diceObject[Total] = 1
         }
     }
-}
-function myrefresh()
-{
-window.location.reload();
-}
-setTimeout('myrefresh()',1000); //指定1秒刷新一次
 
-  
+
+    Object.keys(diceObject).forEach(key => {
+        const p = document.createElement("p")
+        const p1 = document.createElement("p")
+        const p2 = document.createElement("p")
+        let pString =""
+        let pString1 =` ${key} `
+        let pString2 =` ${diceObject[key]} `
+        p.className="resultP"
+        for (let i = 0; i < diceObject[key]; i++) {
+            pString += " *"
+        }
+        p1.innerHTML=pString1
+        p2.innerHTML=pString2
+        p.innerHTML = pString
+        idTotal.appendChild(p1)
+        idTime.appendChild(p2)
+        result.appendChild(p)
+    })
+}
 
 
 const button = document.getElementById("button").addEventListener("click", result)

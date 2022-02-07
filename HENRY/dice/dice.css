@@ -1,5 +1,20 @@
-font-body{
-    display:inline;
-    font-size: 100px;
-
+.font-body{
+    font-size:20px;
+ }
+.p{
+    width: 5vw;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.resultP{
+    color: red;
+    overflow: hidden;
 }
